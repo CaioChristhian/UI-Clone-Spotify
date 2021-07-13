@@ -1,0 +1,58 @@
+<Header>
+          <TopNavegation>
+            <Link to="">
+              <img src={topLeft} alt="" />
+            </Link>
+            <Link to="">
+              <img src={topRight} alt="" />
+            </Link>
+          </TopNavegation>
+
+          <Profile as={Link} to="profile">
+            <img src={profileImg} alt="" />  
+            <p>
+              Caio Christhian
+            </p>
+          </Profile>
+</Header>
+
+export const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+`
+
+export const TopNavegation = styled.div`
+  align-items: center;
+  margin-top: 16px;
+  margin-left: 32px;
+`
+
+export const Profile = styled.div`
+  margin: 16px 16px 0 0;
+  align-items: center;
+  display: flex;
+  max-width: 300px;
+  max-height: 40px;
+  text-decoration: none;
+  background: rgba(0,0,0,.7);
+  padding: 15px;
+  border-radius: 24px;
+  color: #FFFFFF;
+  transition: 0.2s;
+
+  img {
+    border-radius: 50%;
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background: ${shade(0.2, '#6a1b9a')};
+  }
+`
+
+Header, 
+  TopNavegation, 
+  Profile,
